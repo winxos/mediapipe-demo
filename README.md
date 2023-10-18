@@ -17,3 +17,4 @@ use right hand index finger to write.
 
 [![pic](./1.png)](https://youtu.be/5-6sjIr6BP8)
 
+### you can click the image above to see the video.
