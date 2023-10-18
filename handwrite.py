@@ -7,7 +7,8 @@ mp_drawing_styles = mp.solutions.drawing_styles
 mp_hands = mp.solutions.hands
 import numpy as np
 cap = cv2.VideoCapture(0)
-
+cap.set(3,1080)
+cap.set(4,720)
 with mp_holistic.Holistic(
     min_detection_confidence=0.5,
     min_tracking_confidence=0.5) as holistic:
@@ -51,7 +52,7 @@ with mp_holistic.Holistic(
                 if len(cont)>2:
                     pts = np.array(cont,np.int)
                     pts = pts.reshape(-1,1,2)
-                    cv2.polylines(image,[pts],False,color=(200,50,0),thickness = 2)
+                    cv2.polylines(image,[pts],False,color=(0,50,200),thickness = 2)
             else:
                 if len(cont) > 10:
                     pts = np.array(cont,np.int)
@@ -59,7 +60,7 @@ with mp_holistic.Holistic(
                     paint.append(pts)
                 cont = []
         if len(paint) > 0:
-           cv2.polylines(image,paint,False,color=(200,200,0),thickness = 3)
+           cv2.polylines(image,paint,False,color=(0,200,200),thickness = 3)
 
         cv2.imshow('MediaPipe Holistic', image)
         if cv2.waitKey(5) & 0xFF == 27:
