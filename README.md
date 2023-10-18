@@ -15,7 +15,5 @@ use left hand thumb and index finger tip close to enable,
 
 use right hand index finger to write.
 
-![pic](./1.png)
-
-[video at]: https://youtu.be/5-6sjIr6BP8	"video"
+[![pic](./1.png)](https://youtu.be/5-6sjIr6BP8)
 
